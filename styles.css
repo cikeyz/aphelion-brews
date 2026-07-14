@@ -1,4 +1,17 @@
+/* ---------------------------
+   APHELION v5 - Cinematic Dark
+   ---------------------------
+   Immersive single-page experience.
+   Full-bleed media backgrounds.
+   Glassmorphism. Floating particles.
+   Animated equalizer. Text glow.
+   Pure CSS :checked navigation.
+   Hover image previews. Now playing player.
+   --------------------------- */
 
+/* --- 1. DESIGN TOKENS ---
+   Cinematic dark warmth system.
+   Amber accent on deep charcoal. */
 
 :root {
   /* Atmosphere */
@@ -99,6 +112,10 @@ ul, ol {
   height: 0;
 }
 
+/* --- 4. FLOATING PARTICLES ---
+    Cinematic dust motes. Pure CSS.
+    20 dots with randomized drift. */
+
 .particles {
   position: fixed;
   inset: 0;
@@ -161,6 +178,9 @@ ul, ol {
   border-radius: 100px;
 }
 
+/* Nav brand collapses on Home so only links show.
+   Margin replaces flex-gap so it collapses with the brand,
+   keeping the pill perfectly centered at all times. */
 .nav-brand {
   font-family: var(--font-display);
   font-weight: 600;
@@ -214,6 +234,10 @@ ul, ol {
   border-bottom-color: var(--amber);
   text-shadow: 0 0 20px var(--amber-glow);
 }
+
+/* --- 7. STAGE & SCENES ---
+   Each section is a full cinematic scene.
+   Only the checked scene is visible. */
 
 .stage {
   position: relative;
@@ -290,6 +314,9 @@ ul, ol {
   z-index: 2;
 }
 
+/* Gradient backgrounds for non-Home scenes.
+   Sophisticated, soft, directional dark gradients.
+   Images inside .scene-media are hidden on these scenes. */
 .scene-menu .scene-media,
 .scene-music .scene-media,
 .scene-jobs .scene-media {
@@ -332,6 +359,8 @@ ul, ol {
   );
 }
 
+/* Overlays on gradient scenes are subtle -
+   just enough to add depth without darkening */
 .scene-overlay-menu {
   background: linear-gradient(
     to right,
@@ -384,6 +413,11 @@ ul, ol {
 .scene-music .scene-content-scrollable {
   padding-bottom: 105px;
 }
+
+/* ============================
+   SCENE: HOME
+   Cinematic title sequence.
+   ============================ */
 
 .home-eyebrow {
   font-family: var(--font-body);
@@ -490,6 +524,12 @@ ul, ol {
 .home-cta:hover .cta-icon {
   transform: translateX(4px);
 }
+
+/* ============================
+   SCENE: MENU
+   Glassmorphism cards over
+   full-bleed image.
+   ============================ */
 
 .menu-header {
   text-align: left;
@@ -635,6 +675,12 @@ ul, ol {
   color: var(--muted);
   line-height: 1.6;
 }
+
+/* ============================
+   SCENE: MUSIC
+   Split layout. Equalizer.
+   Playlist in glass. Now playing player.
+   ============================ */
 
 .music-layout {
   display: grid;
@@ -900,6 +946,13 @@ ul, ol {
   line-height: 1.6;
 }
 
+/* ============================
+   SCENE: JOBS
+   Dramatic watermark. Editorial quote.
+   Benefits strip. Numbered cards.
+   Prominent CTA.
+   ============================ */
+
 /* Large background watermark */
 .jobs-watermark {
   position: absolute;
@@ -1162,6 +1215,10 @@ ul, ol {
   box-shadow: 0 0 30px var(--amber-glow);
   transform: translateY(-2px);
 }
+
+/* --- 8. FOOTER ---
+   Minimal, cinematic. Normal document flow
+   so it only appears when scrolled to bottom. */
 
 .site-footer {
   position: relative;

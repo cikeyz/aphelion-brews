@@ -1,8 +1,20 @@
+/* --- APHELION v5 - JavaScript Enhancements ---
+   Hover image previews. Now playing player.
+   Video playback. Scroll locking.
+   All core navigation still works without JS. */
 
 document.addEventListener('DOMContentLoaded', () => {
   const radios = document.querySelectorAll('.nav-radio');
   const video = document.querySelector('.scene-video');
   const body = document.body;
+
+  /* ---------------------------
+     MUSIC PLAYER
+     ---------------------------
+     Glassmorphism now-playing widget.
+     Play/pause toggle. Prev/next track.
+     Click playlist items to load track.
+     --------------------------- */
 
   const playerTrack = document.getElementById('playerTrack');
   const playerArtist = document.getElementById('playerArtist');
@@ -107,7 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Initialize first track highlight */
   loadTrack(0);
 
-  
+  /* ---------------------------
+     SECTION SWITCHING
+     --------------------------- */
+
   function updateActiveSection() {
     let activeId = 'home';
     radios.forEach(radio => {
