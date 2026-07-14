@@ -1,327 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Aphelion Brews</title>
- <meta name="description" content="Aphelion is a precision drink shop built for people who choose their environment with intention.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aphelion - Far out. Still warm.</title>
+  <meta name="description" content="Aphelion is a quiet-cosmic café for the soft-loud ones. Specialty drinks, vinyl sets, poetry readings, and a corner booth that somehow always has good light.">
 
- <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230F0E0C'/%3E%3Ctext x='50' y='68' font-family='Georgia, serif' font-size='55' font-weight='300' fill='%23D97706' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+  <!-- ----- FONTS -----
+       Cormorant Garamond: editorial display headings (300, 600, 300i)
+       DM Sans: clean body/UI text (300, 400, 500, 400i) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-
- <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
- <input type="radio" id="nav-home" name="nav" class="nav-radio" checked>
- <input type="radio" id="nav-menu" name="nav" class="nav-radio">
- <input type="radio" id="nav-music" name="nav" class="nav-radio">
- <input type="radio" id="nav-jobs" name="nav" class="nav-radio">
+  <!-- ----- NAVIGATION STATE -----
+       Hidden radio inputs at body-level - the CSS :checked sibling
+       combinator (~) uses these to show/hide content sections and
+       style the active nav link. No JavaScript needed. -->
+  <input type="radio" id="nav-home" name="nav" class="nav-radio" checked>
+  <input type="radio" id="nav-menu" name="nav" class="nav-radio">
+  <input type="radio" id="nav-music" name="nav" class="nav-radio">
+  <input type="radio" id="nav-jobs" name="nav" class="nav-radio">
 
- <div class="particles" aria-hidden="true">
-  <span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span>
-  <span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span>
-  <span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span>
-  <span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span>
-  <span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span>
- </div>
-
- <nav class="top-nav" aria-label="Main navigation">
-  <div class="nav-brand">Aphelion</div>
-  <ul class="nav-links">
-   <li><label for="nav-home" class="nav-link nav-link-home">Home</label></li>
-   <li><label for="nav-menu" class="nav-link nav-link-menu">Menu</label></li>
-   <li><label for="nav-music" class="nav-link nav-link-music">Music</label></li>
-   <li><label for="nav-jobs" class="nav-link nav-link-jobs">Jobs</label></li>
-  </ul>
- </nav>
-
- <main class="stage">
-
-  
-  <section class="scene scene-home" id="home" aria-label="Home">
-   <div class="scene-media">
-    <video class="scene-video" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=1920&q=80">
-     <source src="https://videos.pexels.com/video-files/857251/857251-hd_1920_1080_25fps.mp4" type="video/mp4">
-    </video>
-    <div class="scene-overlay"></div>
-   </div>
-
-   <div class="scene-content">
-    <div class="home-eyebrow">A Precision Drink Shop</div>
-    <h1 class="home-title"><span class="title-glow">Aphelion</span></h1>
-    <div class="home-divider"></div>
-    <p class="home-tagline">Warmth, measured.</p>
-    <p class="home-desc">Every ingredient traceable. Every cup deliberate. The atmosphere does exactly what it promises.</p>
-    <label for="nav-menu" class="home-cta">
-     <span>Enter the Experience</span>
-     <svg class="cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-     </svg>
-    </label>
-    <p class="home-address">47 Orbit Lane, Quezon City &middot; Open daily, 7 AM to 11 PM</p>
-   </div>
-  </section>
-
-  
-  <section class="scene scene-menu" id="menu" aria-label="Menu">
-   <div class="scene-media">
-    <div class="scene-overlay scene-overlay-menu"></div>
-   </div>
-
-   <div class="scene-content scene-content-scrollable">
-    <header class="menu-header">
-     <h2 class="menu-title">The Pour</h2>
-     <p class="menu-subtitle">Every ingredient has a provenance.</p>
-    </header>
-
-    <div class="menu-body">
-     <div class="menu-category">
-      <h3 class="menu-cat-label">Crafted Beverages</h3>
-      <div class="menu-items">
-       <article class="menu-glasscard">
-        <div class="glasscard-image-wrap">
-          <img class="glasscard-image" src="https://files.catbox.moe/7hbsai.png" alt="Perihelion Oat Latte">
-        </div>
-        <div class="glasscard-header"><h4>Perihelion Oat Latte</h4><span class="glasscard-price">&#8369;185</span></div>
-        <p class="glasscard-tags">Vegan &middot; Dairy Free</p>
-        <p class="glasscard-desc">Double pulled Benguet single origin beans, oat milk, cinnamon cold foam.</p>
-       </article>
-
-       <article class="menu-glasscard">
-        <div class="glasscard-image-wrap">
-          <img class="glasscard-image" src="https://files.catbox.moe/hu3coh.png" alt="Cassini Cold Brew">
-        </div>
-        <div class="glasscard-header"><h4>Cassini Cold Brew</h4><span class="glasscard-price">&#8369;175</span></div>
-        <p class="glasscard-tags">Vegan &middot; ~50 kcal</p>
-        <p class="glasscard-desc">20 hour Sagada cold extraction cut with coconut water.</p>
-       </article>
-
-       <article class="menu-glasscard">
-        <div class="glasscard-image-wrap">
-          <img class="glasscard-image" src="https://files.catbox.moe/u3fk9r.png" alt="Solstice Matcha">
-        </div>
-        <div class="glasscard-header"><h4>Solstice Matcha</h4><span class="glasscard-price">&#8369;195</span></div>
-        <p class="glasscard-tags">Vegan &middot; GF &middot; ~90 kcal</p>
-        <p class="glasscard-desc">Ceremonial Uji matcha whisked to jade foam, oat milk, cold pressed vanilla.</p>
-       </article>
-
-       <article class="menu-glasscard">
-        <div class="glasscard-image-wrap">
-          <img class="glasscard-image" src="https://files.catbox.moe/rpiw2v.png" alt="Apogee Protein">
-        </div>
-        <div class="glasscard-header"><h4>Apogee Protein</h4><span class="glasscard-price">&#8369;220</span></div>
-        <p class="glasscard-tags">High Protein &middot; GF &middot; 28g</p>
-        <p class="glasscard-desc">Vanilla whey isolate, saba banana, cashew milk, Davao cacao nibs.</p>
-       </article>
-
-       <article class="menu-glasscard">
-        <div class="glasscard-image-wrap">
-          <img class="glasscard-image" src="https://files.catbox.moe/5ahuij.png" alt="Zenith Hojicha">
-        </div>
-        <div class="glasscard-header"><h4>Zenith Hojicha</h4><span class="glasscard-price">&#8369;170</span></div>
-        <p class="glasscard-tags">Vegan &middot; Dairy Free &middot; ~45 kcal</p>
-        <p class="glasscard-desc">Slowroasted Uji hojicha steeped long and poured over ice with a thread of oat milk and a single drop of brown rice syrup. Smoky, smooth, almost weightless.</p>
-       </article>
-
-       <article class="menu-glasscard">
-        <div class="glasscard-image-wrap">
-          <img class="glasscard-image" src="https://files.catbox.moe/756f7r.png" alt="Equinox Tonic">
-        </div>
-        <div class="glasscard-header"><h4>Equinox Tonic</h4><span class="glasscard-price">&#8369;180</span></div>
-        <p class="glasscard-tags">Vegan &middot; Dairy Free &middot; ~35 kcal</p>
-        <p class="glasscard-desc">Double ristretto over chilled tonic and a single wheel of dried calamansi. The carbonation carries the coffee's brightness without sweetness; the finish is dry and electric.</p>
-       </article>
+  <!-- ----- HEADER -----
+       Persistent brand bar. Left-aligned name + orbital icon. -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <svg class="logo-icon" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+          <circle cx="14" cy="14" r="3" class="logo-sun"/>
+          <circle cx="14" cy="14" r="10" class="logo-orbit"/>
+        </svg>
+        <span class="header-title">Aphelion</span>
       </div>
-     </div>
+    </div>
+  </header>
 
-     <div class="menu-category">
-      <h3 class="menu-cat-label">Grounded Plates</h3>
-      <div class="menu-items">
-       <article class="menu-glasscard">
-        <div class="glasscard-image-wrap">
-          <img class="glasscard-image" src="https://files.catbox.moe/2ju3xk.png" alt="Harvest Grain Bowl">
-        </div>
-        <div class="glasscard-header"><h4>Harvest Grain Bowl</h4><span class="glasscard-price">&#8369;280</span></div>
-        <p class="glasscard-desc">Warm farro, roasted heirloom tomatoes, charred broccolini, za'atar chickpeas.</p>
-       </article>
+  <!-- ----- MAIN LAYOUT -----
+       Two-column grid: sticky sidebar nav + scrollable content area. -->
+  <div class="main-layout">
 
-       <article class="menu-glasscard">
-        <div class="glasscard-image-wrap">
-          <img class="glasscard-image" src="https://files.catbox.moe/v9fnkx.png" alt="Seared Tuna Soba">
-        </div>
-        <div class="glasscard-header"><h4>Seared Tuna Soba</h4><span class="glasscard-price">&#8369;320</span></div>
-        <p class="glasscard-desc">Cold buckwheat soba in dashi yuzu with sesame seared yellowfin.</p>
-       </article>
+    <!-- ----- SIDEBAR / NAVIGATION -----
+         Labels wired to radio inputs. Clicking triggers :checked state. -->
+    <nav class="sidebar" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <label for="nav-home" class="nav-link nav-link-home" tabindex="0">Home</label>
+        </li>
+        <li class="nav-item">
+          <label for="nav-menu" class="nav-link nav-link-menu" tabindex="0">Menu</label>
+        </li>
+        <li class="nav-item">
+          <label for="nav-music" class="nav-link nav-link-music" tabindex="0">Music</label>
+        </li>
+        <li class="nav-item">
+          <label for="nav-jobs" class="nav-link nav-link-jobs" tabindex="0">Jobs</label>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <p class="sidebar-tagline">Your orbit ends here.</p>
       </div>
-     </div>
+    </nav>
 
-     <div class="menu-category">
-      <h3 class="menu-cat-label">Soft Orbit</h3>
-      <div class="menu-items">
-       <article class="menu-glasscard">
-        <div class="glasscard-image-wrap">
-          <img class="glasscard-image" src="https://files.catbox.moe/rjq2x7.png" alt="Dark Chocolate Protein Tart">
+    <!-- ----- CONTENT AREA -----
+         Four sections - only one visible at a time via CSS :checked. -->
+    <main class="content">
+
+      <!-- ============================
+           SECTION: HOME
+           ============================ -->
+      <section class="section section-home" id="home">
+
+        <!-- ----- HERO -----
+             Asymmetric layout: headline left, sub-tagline right.
+             Radial gradient backdrop simulates a distant star. -->
+        <div class="hero">
+          <h2 class="hero-title">Far out.<br>Still warm.</h2>
+          <p class="hero-sub">your orbit ends here</p>
         </div>
-        <div class="glasscard-header"><h4>Dark Chocolate Protein Tart</h4><span class="glasscard-price">&#8369;165</span></div>
-        <p class="glasscard-desc">72% Davao dark chocolate ganache in almond shell.</p>
-       </article>
 
-       <article class="menu-glasscard">
-        <div class="glasscard-image-wrap">
-          <img class="glasscard-image" src="https://files.catbox.moe/iv9aj1.png" alt="Earl Grey Canelé">
+        <div class="hero-divider"></div>
+
+        <!-- ----- WELCOME -----
+             Brief introduction to the space. -->
+        <div class="home-content">
+          <p class="home-intro">
+            Aphelion is a quiet place for loud minds - where every drink is a small act of care, and nothing here is trying too hard. Come as you are, stay as long as you need, leave a little lighter than when you walked in.
+          </p>
+
+          <div class="hero-image-wrap">
+            <img src="img/hero-cafe.png" alt="Interior of Aphelion café - warm amber lighting, dark wood tables, vinyl records on a shelf, intimate atmosphere" class="hero-image">
+          </div>
+
+          <ul class="home-offerings">
+            <li class="offering-item">Specialty drinks crafted with intention</li>
+            <li class="offering-item">Light meals and snacks that don't rush you</li>
+            <li class="offering-item">Vinyl sets and poetry readings</li>
+            <li class="offering-item">Open mic nights and quiet studio mornings</li>
+            <li class="offering-item">A corner booth that somehow always has good light</li>
+          </ul>
+
+          <address class="home-contact">
+            47 Orbit Lane, Quezon City, 1100<br>
+            (+63) 917 284 7301
+          </address>
         </div>
-        <div class="glasscard-header"><h4>Earl Grey Canel&eacute;</h4><span class="glasscard-price">&#8369;135</span></div>
-        <p class="glasscard-desc">Bordeaux canel&eacute; in beeswaxsealed copper molds, bergamot Earl Grey.</p>
-       </article>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
+      </section>
 
-  
-  <section class="scene scene-music" id="music" aria-label="Music and vibe">
-   <div class="scene-media">
-    <div class="scene-overlay scene-overlay-music"></div>
-   </div>
+      <!-- ============================
+           SECTION: MENU
+           ============================ -->
+      <section class="section section-menu" id="menu">
+        <h2 class="section-heading">The Menu</h2>
+        <p class="section-intro">Curated. Not a full list. A selection.</p>
 
-   <div class="scene-content scene-content-scrollable">
-    <div class="music-layout">
-     <div class="music-left">
-      <h2 class="music-title">The Frequency</h2>
-      <p class="music-desc">The lights sit at 70% of full. Warm, directional, never overhead. The acoustics were tuned for conversation, not performance.</p>
+        <!-- ----- HOT ORBIT ----- -->
+        <h3 class="menu-category">Hot Orbit</h3>
 
-      <!-- Now Playing Player -->
-      <div class="player-glass" id="musicPlayer">
-       <div class="player-art">
-        <img src="https://images.genius.com/4e86485248f25fb652fd7a7a09fcf230.1000x1000x1.png" alt="Album art" id="playerArt">
-       </div>
-       <div class="player-info">
-        <p class="player-track" id="playerTrack">marjorie</p>
-        <p class="player-artist" id="playerArtist">Taylor Swift</p>
-        <div class="player-progress"><div class="player-progress-bar" id="playerProgress"></div></div>
-        <div class="player-controls">
-         <button class="player-btn" id="playerPrev" aria-label="Previous track">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M19 20L9 12l10-8v16zM5 19h2V5H5v14z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-         </button>
-         <button class="player-btn player-btn-play" id="playerPlay" aria-label="Play or pause">
-          <svg viewBox="0 0 24 24" fill="none" id="playIcon"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
-          <svg viewBox="0 0 24 24" fill="none" id="pauseIcon" style="display:none"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" fill="currentColor"/></svg>
-         </button>
-         <button class="player-btn" id="playerNext" aria-label="Next track">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M5 4l10 8-10 8V4zm9 0h2v16h-2V4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-         </button>
+        <div class="menu-feature-row">
+          <div class="menu-feature-image-wrap">
+            <img src="img/hot-drink.png" alt="Artisan cortado with latte art in a handmade ceramic cup" class="menu-feature-image">
+          </div>
+          <div class="menu-feature-items">
+            <article class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-num">01</span>
+                <h4 class="menu-name">The Perihelion</h4>
+                <span class="menu-price">&#8369;185</span>
+              </div>
+              <p class="menu-subtitle">Oat Milk Cortado</p>
+              <p class="menu-desc">Closest you'll get to the sun without burning. Caramelized honey swirled into a double ristretto with steamed oat milk. Small. Dense. Revelatory.</p>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-num">02</span>
+                <h4 class="menu-name">Mirrorball Matcha</h4>
+                <span class="menu-price">&#8369;210</span>
+              </div>
+              <p class="menu-subtitle">Ceremonial Oat Matcha</p>
+              <p class="menu-desc">Ceremonial-grade matcha, oat milk, a thread of pandan syrup, and a finish of edible silver shimmer. Tastes like holding something beautiful without squeezing too hard.</p>
+            </article>
+          </div>
         </div>
-       </div>
+
+        <article class="menu-item">
+          <div class="menu-item-header">
+            <span class="menu-num">03</span>
+            <h4 class="menu-name">Dark Matter Cocoa</h4>
+            <span class="menu-price">&#8369;195</span>
+          </div>
+          <p class="menu-subtitle">Midnight Chocolate</p>
+          <p class="menu-desc">Double-rich dark chocolate, steamed oat milk, black sea salt, espresso whisper. Dense as a thought you've been carrying since Tuesday.</p>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-item-header">
+            <span class="menu-num">04</span>
+            <h4 class="menu-name">Static &amp; Honey</h4>
+            <span class="menu-price">&#8369;175</span>
+          </div>
+          <p class="menu-subtitle">Chamomile Oat Latte</p>
+          <p class="menu-desc">Chamomile steeped long, raw honey, oat milk. Dried lavender sprig on top, mostly for the way it looks in low light. The drink that says: <em>you've done enough today.</em></p>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-item-header">
+            <span class="menu-num">05</span>
+            <h4 class="menu-name">Redshift</h4>
+            <span class="menu-price">&#8369;180</span>
+          </div>
+          <p class="menu-subtitle">Turmeric Golden Latte</p>
+          <p class="menu-desc">Turmeric, ginger, cinnamon, oat milk, a crack of black pepper. Warm the way mornings should be - slowly, and from the inside out.</p>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-item-header">
+            <span class="menu-num">06</span>
+            <h4 class="menu-name">Event Horizon</h4>
+            <span class="menu-price">&#8369;120</span>
+          </div>
+          <p class="menu-subtitle">Double Espresso</p>
+          <p class="menu-desc">Served in a ceramic thimble. No milk. No sugar. No modifiers. Just you and the pull. If you know, you know.</p>
+        </article>
+
+        <!-- ----- COLD DRIFT ----- -->
+        <h3 class="menu-category">Cold Drift</h3>
+
+        <div class="menu-feature-row menu-feature-row-reverse">
+          <div class="menu-feature-items">
+            <article class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-num">07</span>
+                <h4 class="menu-name">The Aphelion Drift</h4>
+                <span class="menu-price">&#8369;225</span>
+              </div>
+              <p class="menu-subtitle">Ube Cold Brew Float</p>
+              <p class="menu-desc">Ube-infused cold brew with coconut cream, brown sugar syrup, and a butterfly pea tea float that shifts color as you stir. Slow. Beautiful. Exactly as patient as you should be with yourself.</p>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-num">08</span>
+                <h4 class="menu-name">Retrograde</h4>
+                <span class="menu-price">&#8369;195</span>
+              </div>
+              <p class="menu-subtitle">Lavender Cold Brew</p>
+              <p class="menu-desc">Vanilla cold brew with lavender foam and a single dried rosebud. For the romantics who also need caffeine to function.</p>
+            </article>
+          </div>
+          <div class="menu-feature-image-wrap">
+            <img src="img/cold-drink.png" alt="Iced ube latte with layered purple and cream tones in a tall glass" class="menu-feature-image">
+          </div>
+        </div>
+
+        <article class="menu-item">
+          <div class="menu-item-header">
+            <span class="menu-num">09</span>
+            <h4 class="menu-name">Pale Blue Dot</h4>
+            <span class="menu-price">&#8369;185</span>
+          </div>
+          <p class="menu-subtitle">Butterfly Pea Yuzu Tonic</p>
+          <p class="menu-desc">Butterfly pea flower tea on sparkling tonic, fresh yuzu, a whisper of elderflower. Changes color when you add the citrus. A small science experiment in a glass.</p>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-item-header">
+            <span class="menu-num">10</span>
+            <h4 class="menu-name">Solar Wind</h4>
+            <span class="menu-price">&#8369;160</span>
+          </div>
+          <p class="menu-subtitle">Iced Hibiscus Ginger</p>
+          <p class="menu-desc">Hibiscus tea, fresh ginger, raw honey, served over crushed ice. Tart. Bright. The drink that reminds you summer is a state of mind.</p>
+        </article>
+
+        <!-- ----- SMALL ORBITS ----- -->
+        <h3 class="menu-category">Small Orbits</h3>
+
+        <div class="menu-feature-row">
+          <div class="menu-feature-image-wrap">
+            <img src="img/food-pastries.png" alt="Artisan pastries on dark slate - rice crispy bar, chocolate cookie, banana bread slices" class="menu-feature-image menu-feature-image-wide">
+          </div>
+          <div class="menu-feature-items">
+            <article class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-num">11</span>
+                <h4 class="menu-name">The Signal Bar</h4>
+                <span class="menu-price">&#8369;95</span>
+              </div>
+              <p class="menu-subtitle">Brown Butter Rice Crispy</p>
+              <p class="menu-desc">Brown butter, miso caramel, roasted sesame. Wrapped in wax paper with a small sticker. Hits different at hour three of a work session.</p>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-item-header">
+                <span class="menu-num">12</span>
+                <h4 class="menu-name">Gravity Well</h4>
+                <span class="menu-price">&#8369;110</span>
+              </div>
+              <p class="menu-subtitle">Dark Chocolate Tahini Cookie</p>
+              <p class="menu-desc">Crackled on the outside, molten in the center. The cookie that makes you reconsider other cookies.</p>
+            </article>
+          </div>
+        </div>
+
+        <article class="menu-item">
+          <div class="menu-item-header">
+            <span class="menu-num">13</span>
+            <h4 class="menu-name">Light Year Loaf</h4>
+            <span class="menu-price">&#8369;120</span>
+          </div>
+          <p class="menu-subtitle">Banana Bread Slice</p>
+          <p class="menu-desc">Banana bread with miso caramel glaze and toasted walnuts. Served warm. The kind of thing someone's grandmother would make if she were also very cool.</p>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-item-header">
+            <span class="menu-num">14</span>
+            <h4 class="menu-name">Cosmic Dust</h4>
+            <span class="menu-price">&#8369;130</span>
+          </div>
+          <p class="menu-subtitle">Everything Bagel</p>
+          <p class="menu-desc">Everything bagel with cream cheese and chili crisp oil. The baseline. The constant. The thing you order when you're not sure what you want but you know you need something.</p>
+        </article>
+
+        <!-- ----- PLATES ----- -->
+        <h3 class="menu-category">Plates</h3>
+
+        <article class="menu-item">
+          <div class="menu-item-header">
+            <span class="menu-num">15</span>
+            <h4 class="menu-name">The Steady State</h4>
+            <span class="menu-price">&#8369;195</span>
+          </div>
+          <p class="menu-subtitle">Avocado Toast</p>
+          <p class="menu-desc">Sourdough, smashed avocado, pickled red onion, microgreens, chili flakes, a squeeze of calamansi. The one everyone pretends is basic but never stops ordering.</p>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-item-header">
+            <span class="menu-num">16</span>
+            <h4 class="menu-name">Orbit Platter</h4>
+            <span class="menu-price">&#8369;285</span>
+          </div>
+          <p class="menu-subtitle">Sharing Board</p>
+          <p class="menu-desc">Hummus, marinated olives, roasted cherry tomatoes, sourdough slices, and a side of whipped feta. For two - or for one, if you've earned it.</p>
+        </article>
+
+        <article class="menu-item">
+          <div class="menu-item-header">
+            <span class="menu-num">17</span>
+            <h4 class="menu-name">Morning Signal</h4>
+            <span class="menu-price">&#8369;175</span>
+          </div>
+          <p class="menu-subtitle">Granola Bowl</p>
+          <p class="menu-desc">Housemade granola with coconut yogurt, seasonal fruit, chia seeds, and a thread of raw honey. For mornings that deserve structure.</p>
+        </article>
+      </section>
+
+      <!-- ============================
+           SECTION: MUSIC
+           ============================ -->
+      <section class="section section-music" id="music">
+        <h2 class="section-heading">What's Playing</h2>
+
+        <div class="music-layout">
+          <div class="music-text">
+            <p class="music-intro">
+              Aphelion doesn't play music loudly enough to need Shazam. It plays it loudly enough to feel held.
+            </p>
+            <p class="music-intro">
+              Resident sound: slow ambient folk into lo-fi soul into soft electronic. The progression that happens naturally between 8 PM and midnight in a place where no one's rushing you.
+            </p>
+
+            <!-- ----- NOW SPINNING ----- -->
+            <h3 class="music-subheading">Now Spinning</h3>
+            <ul class="playlist">
+              <li class="playlist-item">
+                <span class="playlist-dot"></span>
+                <span class="playlist-artist">Novo Amor</span>
+                <span class="playlist-desc">the yearning</span>
+              </li>
+              <li class="playlist-item">
+                <span class="playlist-dot"></span>
+                <span class="playlist-artist">Cigarettes After Sex</span>
+                <span class="playlist-desc">the haze</span>
+              </li>
+              <li class="playlist-item">
+                <span class="playlist-dot"></span>
+                <span class="playlist-artist">Japanese Breakfast</span>
+                <span class="playlist-desc">the bright grief</span>
+              </li>
+              <li class="playlist-item">
+                <span class="playlist-dot"></span>
+                <span class="playlist-artist">Hozier</span>
+                <span class="playlist-desc">the depth</span>
+              </li>
+              <li class="playlist-item">
+                <span class="playlist-dot"></span>
+                <span class="playlist-artist">Sade</span>
+                <span class="playlist-desc">the long elegance</span>
+              </li>
+              <li class="playlist-item">
+                <span class="playlist-dot"></span>
+                <span class="playlist-artist">Hiroshi Yoshimura</span>
+                <span class="playlist-desc">the space between sounds</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ----- VINYL RECORD (CSS Art) ----- -->
+          <div class="vinyl-wrap">
+            <div class="vinyl">
+              <div class="vinyl-label"></div>
+              <div class="vinyl-hole"></div>
+            </div>
+            <div class="tonearm"></div>
+          </div>
+        </div>
+
+        <!-- ----- WEEKLY EVENTS ----- -->
+        <h3 class="music-subheading music-subheading-events">Weekly Events</h3>
+
+        <div class="events-grid">
+          <article class="event-card">
+            <p class="event-day">Every Friday</p>
+            <h4 class="event-name">Slow Frequency</h4>
+            <p class="event-time">8 &ndash; 11 PM</p>
+            <p class="event-desc">A vinyl DJ set by a rotating local artist. No talking over the music. No requests. The DJ chooses, and you trust them. Entrance: the price of one drink.</p>
+          </article>
+
+          <article class="event-card">
+            <p class="event-day">Every Other Wednesday</p>
+            <h4 class="event-name">Static &amp; Verse</h4>
+            <p class="event-time">7:30 PM</p>
+            <p class="event-desc">Open mic for spoken word and poetry. Not a slam. Not a competition. A sharing. Two-minute maximum per piece. Applause is soft - we snap fingers here. Sign-up sheet on the counter; 8 slots per night.</p>
+          </article>
+
+          <article class="event-card">
+            <p class="event-day">Every Saturday</p>
+            <h4 class="event-name">Lo-fi Studio Mornings</h4>
+            <p class="event-time">9 AM &ndash; 12 PM</p>
+            <p class="event-desc">No events. No talking unless necessary. Just ambient music, coffee, and whatever you're working on. Some people come every week. We know their order.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================
+           SECTION: JOBS
+           ============================ -->
+      <section class="section section-jobs" id="jobs">
+        <h2 class="section-heading">Work Here</h2>
+        <p class="section-intro"><em>We're small. Everyone who works here matters a lot.</em></p>
+
+        <article class="job-posting">
+          <h3 class="job-title">Signal Keeper</h3>
+          <p class="job-role">Head Barista</p>
+          <p class="job-desc">You read the room before it asks anything of you, and you pull espresso like it's architecture - purposeful, precise, irreversible. We're looking for someone who treats every drink as a small piece of care made tangible, and who finds genuine meaning in getting it exactly right.</p>
+        </article>
+
+        <article class="job-posting">
+          <h3 class="job-title">Drift Companion</h3>
+          <p class="job-role">Floor &amp; Vibe (Part-time)</p>
+          <p class="job-desc">Part host, part ambient presence. You make people feel seen without making it a performance. You refill water without being asked and choose the right song for 9 PM on a Tuesday. We're looking for someone who understands that hospitality is quiet love, not theater.</p>
+        </article>
+
+        <article class="job-posting">
+          <h3 class="job-title">Frequency Curator</h3>
+          <p class="job-role">Events &amp; Music Coordinator (Part-time)</p>
+          <p class="job-desc">You build a Friday night from nothing - choosing the DJ, the lighting cue, the opening record. You run Static &amp; Verse like a gentle conductor. You understand that programming a space is an act of emotional architecture, and you take it seriously without taking yourself seriously.</p>
+        </article>
+
+        <div class="job-apply">
+          <p class="job-apply-heading">How to apply</p>
+          <p class="job-apply-text">No forms. No cover letters.<br>Write us at <a href="mailto:orbit@aphelion.cafe" class="job-email">orbit@aphelion.cafe</a> - tell us what you'd play at 10 PM on a quiet Tuesday.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ----- FOOTER -----
+       Copyright, hours, social icons. Minimal. -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-brand-col">
+        <p class="footer-brand">Aphelion</p>
+        <p class="footer-tagline">Your orbit ends here.</p>
       </div>
 
-      <div class="ritual-glass">
-       <p class="ritual-title">Last Light Hour</p>
-       <p class="ritual-when">Every Friday at 6 PM</p>
-       <p class="ritual-desc">The playlist slows to instrumentals. The front door stays open. No agenda. Just the decision to stay.</p>
+      <div class="footer-col footer-hours-col">
+        <p class="footer-label">Hours</p>
+        <p class="footer-hours">Every day, all hours.<br>We're here when you are.</p>
       </div>
-     </div>
 
-     <div class="music-right">
-      <div class="playlist-glass">
-       <h3 class="playlist-label">Now Playing</h3>
-       <ol class="playlist">
-        <li data-image="https://images.genius.com/4e86485248f25fb652fd7a7a09fcf230.1000x1000x1.png" data-track="marjorie" data-artist="Taylor Swift"><span class="pl-num">01</span><span class="pl-artist">Taylor Swift</span><span class="pl-song">marjorie</span></li>
-        <li data-image="https://images.genius.com/7d0d55bc0879faa98cdadbef8a19d211.1000x1000x1.png" data-track="Moon Song" data-artist="Phoebe Bridgers"><span class="pl-num">02</span><span class="pl-artist">Phoebe Bridgers</span><span class="pl-song">Moon Song</span></li>
-        <li data-image="https://images.genius.com/34b658a49107700fb84befb1078a9fe3.600x597x1.jpg" data-track="Holocene" data-artist="Bon Iver"><span class="pl-num">03</span><span class="pl-artist">Bon Iver</span><span class="pl-song">Holocene</span></li>
-        <li data-image="https://images.genius.com/5229d72f19e9895d28f1c8903144de07.1000x1000x1.png" data-track="First Love / Late Spring" data-artist="Mitski"><span class="pl-num">04</span><span class="pl-artist">Mitski</span><span class="pl-song">First Love / Late Spring</span></li>
-        <li data-image="https://images.genius.com/2dd4ed15fde5c14cc61fbde9ab47e1c7.1000x1000x1.jpg" data-track="Anchor" data-artist="Novo Amor"><span class="pl-num">05</span><span class="pl-artist">Novo Amor</span><span class="pl-song">Anchor</span></li>
-        <li data-image="https://images.genius.com/750737a023d383b93057b73d546bfe4e.1000x1000x1.png" data-track="Ivy" data-artist="Frank Ocean"><span class="pl-num">06</span><span class="pl-artist">Frank Ocean</span><span class="pl-song">Ivy</span></li>
-        <li data-image="https://images.genius.com/a279ae6c9053d32de48df2f959a784ed.637x637x1.png" data-track="Kokomo, IN" data-artist="Japanese Breakfast"><span class="pl-num">07</span><span class="pl-artist">Japanese Breakfast</span><span class="pl-song">Kokomo, IN</span></li>
-        <li data-image="https://images.genius.com/4a82d8ab652cd69ff95b6bcb44264b14.1000x1000x1.png" data-track="Death With Dignity" data-artist="Sufjan Stevens"><span class="pl-num">08</span><span class="pl-artist">Sufjan Stevens</span><span class="pl-song">Death With Dignity</span></li>
-        <li data-image="https://images.genius.com/0f06931d05bd3921e8c98fd2aa087307.1000x1000x1.png" data-track="Venice Bitch" data-artist="Lana Del Rey"><span class="pl-num">09</span><span class="pl-artist">Lana Del Rey</span><span class="pl-song">Venice Bitch</span></li>
-        <li data-image="https://images.genius.com/405bc0102fc8a3fd251e3e40536ed9c4.1000x1000x1.png" data-track="Million Reasons" data-artist="Lady Gaga"><span class="pl-num">10</span><span class="pl-artist">Lady Gaga</span><span class="pl-song">Million Reasons</span></li>
-       </ol>
+      <div class="footer-col footer-social-col">
+        <p class="footer-label">Find Us</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" class="social-stroke"/>
+              <circle cx="12" cy="12" r="5" class="social-stroke"/>
+              <circle cx="17.5" cy="6.5" r="1.5" class="social-fill"/>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="X (Twitter)">
+            <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" class="social-fill"/>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Spotify">
+            <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" class="social-fill"/>
+            </svg>
+          </a>
+        </div>
       </div>
-     </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Aphelion. All rights reserved.</p>
+        <a href="mailto:orbit@aphelion.cafe" class="footer-email">orbit@aphelion.cafe</a>
+      </div>
     </div>
-   </div>
-  </section>
+  </footer>
 
-  
-  <section class="scene scene-jobs" id="jobs" aria-label="Jobs">
-   <div class="scene-media">
-    <div class="scene-overlay scene-overlay-jobs"></div>
-   </div>
-
-   <div class="scene-content scene-content-scrollable">
-    <div class="jobs-watermark" aria-hidden="true">WORK</div>
-
-    <header class="jobs-header">
-     <h2 class="jobs-title">Come Work Here</h2>
-     <p class="jobs-subtitle">We're small. Everyone matters a lot.</p>
-    </header>
-
-    <div class="jobs-culture-glass">
-     <span class="culture-quote-mark" aria-hidden="true">"</span>
-     <p>Working at Aphelion means being treated like someone with taste, because we hired you assuming you have it. We don't do toxic positivity, performative culture, or mandatory fun.</p>
-    </div>
-
-    <div class="jobs-benefits">
-     <div class="benefit-item"><span class="benefit-dot" aria-hidden="true"></span><span class="benefit-text">Above market pay</span></div>
-     <div class="benefit-item"><span class="benefit-dot" aria-hidden="true"></span><span class="benefit-text">Free drinks &amp; meals</span></div>
-     <div class="benefit-item"><span class="benefit-dot" aria-hidden="true"></span><span class="benefit-text">Flexible shifts</span></div>
-     <div class="benefit-item"><span class="benefit-dot" aria-hidden="true"></span><span class="benefit-text">Creative autonomy</span></div>
-    </div>
-
-    <div class="jobs-grid">
-     <article class="job-glasscard job-glasscard-offset">
-      <span class="job-number" aria-hidden="true">01</span>
-      <h3 class="job-glasscard-title">Brew Architect</h3>
-      <p class="job-glasscard-role">Barista / Drinks Lead</p>
-      <p class="job-glasscard-body">Own every drink in The Pour. Maintain calibration. Carry consistency across every shift. You have opinions about extraction ratios and you're right about most of them.</p>
-     </article>
-
-     <article class="job-glasscard">
-      <span class="job-number" aria-hidden="true">02</span>
-      <h3 class="job-glasscard-title">Table Keeper</h3>
-      <p class="job-glasscard-role">Front of House</p>
-      <p class="job-glasscard-body">Manage service from order to close. Handle the room with enough attention that guests feel looked after and enough restraint that they don't feel watched.</p>
-     </article>
-
-     <article class="job-glasscard">
-      <span class="job-number" aria-hidden="true">03</span>
-      <h3 class="job-glasscard-title">Provisions Curator</h3>
-      <p class="job-glasscard-role">Sourcing &amp; Inventory</p>
-      <p class="job-glasscard-body">Source and manage all ingredients, from coffee lots to agar to beeswax. Maintain quality standards and the relationships that make them possible.</p>
-     </article>
-
-     <article class="job-glasscard job-glasscard-offset">
-      <span class="job-number" aria-hidden="true">04</span>
-      <h3 class="job-glasscard-title">Visual Correspondent</h3>
-      <p class="job-glasscard-role">Brand &amp; Content</p>
-      <p class="job-glasscard-body">Own Aphelion's visual presence: photography, layout, seasonal copy, and collateral that looks effortless because you put in the effort before anyone arrived.</p>
-     </article>
-    </div>
-
-    <div class="jobs-apply-glass">
-     <p class="apply-label">How to apply</p>
-     <p class="apply-text">No forms. No cover letters. Write us at <a href="mailto:orbit@aphelion.cafe">orbit@aphelion.cafe</a>. Tell us what you'd play at 10 PM on a quiet Tuesday.</p>
-     <a href="mailto:orbit@aphelion.cafe" class="apply-cta">Send an email</a>
-    </div>
-   </div>
-  </section>
-
- </main>
-
- <footer class="site-footer">
-  <span>Aphelion</span><span class="footer-dot"></span>
-  <span>47 Orbit Lane, Quezon City</span><span class="footer-dot"></span>
-  <span>Open daily, 7 AM to 11 PM</span><span class="footer-dot"></span>
-  <span>2026</span><span class="footer-dot"></span>
-  <a href="mailto:orbit@aphelion.cafe">orbit@aphelion.cafe</a>
- </footer>
-
- <script src="main.js"></script>
 </body>
 </html>
