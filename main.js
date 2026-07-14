@@ -1,13 +1,4 @@
-/* --- 1. MUSIC PLAYER ---
-   I wired this inside DOMContentLoaded so the DOM is definitely
-   parsed before we try to grab any elements. The player is a
-   simulated now-playing widget - there is no actual audio, just
-   a fake progress bar and track switching so the Music scene
-   feels interactive without needing an audio library.
 
-   Tracks are pulled from the playlist <li> data attributes in
-   the HTML. Clicking a playlist item loads the track; prev/next
-   cycle through the list. */
 document.addEventListener('DOMContentLoaded', () => {
   const radios = document.querySelectorAll('.nav-radio');
   const video = document.querySelector('.scene-video');
@@ -116,11 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Initialize first track highlight */
   loadTrack(0);
 
-  /* --- 2. SECTION SWITCHING ---
-     When a nav radio changes, I update body classes so CSS knows
-     which scene to show. I also lock scroll on the Home scene
-     (it is a fixed cinematic viewport) and manage video playback
-     so the background video pauses when you leave Home. */
+  
   function updateActiveSection() {
     let activeId = 'home';
     radios.forEach(radio => {
