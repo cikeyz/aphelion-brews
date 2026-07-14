@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Warm linen background -->
+  <rect width="800" height="600" fill="#F6F1EB"/>
+
+  <!-- Soft shadow under cup -->
+  <ellipse cx="400" cy="420" rx="140" ry="30" fill="#E8DFD4" opacity="0.6"/>
+
+  <!-- Raw linen texture lines -->
+  <g stroke="#E8DFD4" stroke-width="1" opacity="0.5">
+    <line x1="50" y1="100" x2="750" y2="120"/>
+    <line x1="50" y1="200" x2="750" y2="210"/>
+    <line x1="50" y1="300" x2="750" y2="295"/>
+    <line x1="50" y1="400" x2="750" y2="410"/>
+    <line x1="50" y1="500" x2="750" y2="490"/>
+    <line x1="100" y1="50" x2="110" y2="550"/>
+    <line x1="250" y1="50" x2="245" y2="550"/>
+    <line x1="400" y1="50" x2="405" y2="550"/>
+    <line x1="550" y1="50" x2="545" y2="550"/>
+    <line x1="700" y1="50" x2="705" y2="550"/>
+  </g>
+
+  <!-- Ceramic cup body -->
+  <path d="M 320 220
+           C 320 220, 310 380, 340 410
+           C 360 430, 440 430, 460 410
+           C 490 380, 480 220, 480 220
+           Z"
+        fill="#FAF6F1"
+        stroke="#E0D5C8"
+        stroke-width="1.5"/>
+
+  <!-- Cup rim -->
+  <ellipse cx="400" cy="220" rx="80" ry="18"
+           fill="#FDFAF5"
+           stroke="#E0D5C8"
+           stroke-width="1.5"/>
+
+  <!-- Coffee surface -->
+  <ellipse cx="400" cy="222" rx="72" ry="14"
+           fill="#C4A882"
+           opacity="0.85"/>
+
+  <!-- Latte art — abstract rosetta -->
+  <g fill="none" stroke="#FDFAF5" stroke-width="2.5" stroke-linecap="round" opacity="0.9">
+    <path d="M 400 222 Q 385 215 380 225"/>
+    <path d="M 400 222 Q 415 215 420 225"/>
+    <path d="M 400 222 Q 375 220 370 230"/>
+    <path d="M 400 222 Q 425 220 430 230"/>
+    <path d="M 400 222 Q 390 208 400 205"/>
+    <path d="M 400 222 Q 410 208 400 205"/>
+    <path d="M 400 222 Q 395 212 400 210"/>
+    <path d="M 400 222 Q 405 212 400 210"/>
+  </g>
+
+  <!-- Cup handle -->
+  <path d="M 480 260
+           C 520 260, 520 320, 480 340"
+        fill="none"
+        stroke="#FAF6F1"
+        stroke-width="12"
+        stroke-linecap="round"/>
+  <path d="M 480 260
+           C 520 260, 520 320, 480 340"
+        fill="none"
+        stroke="#E0D5C8"
+        stroke-width="1.5"
+        stroke-linecap="round"/>
+
+  <!-- Warm light bloom (top-left) -->
+  <circle cx="150" cy="100" r="180" fill="#FFF5E6" opacity="0.25"/>
+  <circle cx="180" cy="130" r="120" fill="#FFF8F0" opacity="0.3"/>
+
+  <!-- Soft shadow on right side -->
+  <rect x="650" y="0" width="150" height="600" fill="#1A1410" opacity="0.03"/>
+
+  <!-- Abstract orbital accent — small planet shape -->
+  <circle cx="680" cy="480" r="40" fill="none" stroke="#B85C2A" stroke-width="0.5" opacity="0.15"/>
+  <circle cx="680" cy="480" r="25" fill="#B85C2A" opacity="0.06"/>
+  <circle cx="680" cy="480" r="6" fill="#B85C2A" opacity="0.12"/>
+
+  <!-- Subtle grain dots -->
+  <g fill="#1A1410" opacity="0.015">
+    <circle cx="100" cy="500" r="1.5"/>
+    <circle cx="250" cy="520" r="1"/>
+    <circle cx="600" cy="150" r="1.5"/>
+    <circle cx="720" cy="300" r="1"/>
+    <circle cx="150" cy="350" r="1"/>
+    <circle cx="550" cy="480" r="1.5"/>
+    <circle cx="300" cy="180" r="1"/>
+    <circle cx="650" cy="250" r="1"/>
+  </g>
+</svg>
